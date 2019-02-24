@@ -1,5 +1,5 @@
 ---
-title: "Set Up v1"
+title: "Set Up v2"
 output: 
   learnr::tutorial:
     progressive: true
@@ -12,6 +12,8 @@ library(learnr)
 tutorial_options(exercise.timelimit = 60)
 options(
     tutorial.storage = filesystem_storage("/srv/shiny-server/tut_stor", compress = TRUE),
+    tutorial.http_header_tutorial_id = "X-Tutorial-ID",
+    tutorial.http_header_tutorial_version = "X-Tutorial-Version",
     tutorial.http_header_user_id = "X-Tutorial-UserID"
     )
 ```
